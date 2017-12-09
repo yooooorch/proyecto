@@ -1,0 +1,273 @@
+*
+{
+font-family: 'Inconsolata';
+}
+nav[id="Movil"]
+{
+	display:none;
+}
+
+nav a
+{
+	text-decoration:none;
+	color:lime;
+}
+html {margin:0;}
+
+
+#musica
+{
+position:fixed;top:10px;left:0px;
+}
+		td img[class="abc"]
+		{
+			display:none;
+		}
+
+td img
+{
+width: 321px;
+}
+#fondo
+{
+position:fixed;
+z-index:-10;
+left:0;
+top:0;
+background-image:url("../imagenes/background.jpg");
+background-size:100% 100%;
+background-repeat:no-repeat;
+width:100%;
+min-height:100%;
+}
+body{
+background-image:url("../imagenes/background.jpg");
+background-size:100% 100%;
+background-repeat:no-repeat;
+width:100%;
+min-height:100%;
+margin:0;
+}
+#proyecto{
+width: 70%;
+    margin: 0 auto;
+    color: lime;
+    min-height: 100%;
+    background-color: rgba(86, 86, 86, 0.82);
+}
+header
+{
+background-image: url("../imagenes/cabezera.jpg");
+    background-size: 100% 167%;
+    background-repeat: no-repeat;
+    height: 208px;
+    width: 100%;
+    background-color: #71969F;
+    background-position-y: -50px;
+
+}
+nav
+{
+    height: 45px;
+    background-color: black;
+    padding: 6px;
+    margin-top: 4px;
+}
+nav li
+{
+	list-style:none;
+	cursor:pointer;
+	margin-right:20px;
+}
+nav ul:nth-child(1) li
+{
+	display:inline-block;
+	position:relative;
+	z-index:10;
+	height:100px;
+}
+nav ul li:hover > ul li
+{
+	display:block;
+}
+nav ul li:hover ul > li
+{
+	height:45px;
+}
+nav ul li:hover > ul
+{
+	display:block;
+	background-color:white;
+	width:200px;
+	background-color:black;
+	padding:6px;
+	font-size:19px;
+	border-radius: 8px;
+	position:absolute;
+        margin-top: 12px;
+}
+nav ul li ul li:hover
+{
+	transition:1s;
+	background-color:white;
+}
+nav ul li ul li
+{
+	list-style:none;
+	cursor:pointer;
+}
+nav ul li ul
+{
+	display:none;
+}
+video
+{
+	width: 500px;
+    height: 345px;
+    background-color: black;
+}
+	footer
+	{
+		margin-top: 49px;
+    		height: 101px;
+	}
+form
+{
+clear:none;
+}
+#miau
+{
+	width:300px;
+	float:right;
+}
+#Contenido
+{
+margin-top:40px;
+}
+table
+{
+margin-left:1px;
+border: 1px solid black;
+border-collapse: collapse;
+padding:5px;
+}
+#divsubmit
+{
+margin-left:244px;margin-top:6px;
+}
+textarea
+{
+	width:300px;
+}
+td
+{
+	border: 5px solid black;
+	border-collapse: collapse;
+	color:red;
+}
+	@media (max-width:1148px)
+	{
+		#proyecto
+		{
+			width:83%;
+		}
+	}
+	@media (max-width:970px)
+	{
+		footer
+		{
+			height:initial;
+		}
+		#music_3
+		{
+			display:none;
+		}
+		thead
+		{
+			display:none;
+		}
+		td
+		{
+			display:block;
+			clear:both;
+			border:0px;
+			text-align:center;
+			width:86%;
+		}
+		td div
+		{
+			width:100%;
+			display:block;
+			clear:both;
+			
+		}
+		td img
+		{
+			display:none;
+		}
+		td img[class="abc"]
+		{
+			display:block;
+			max-height:200px;
+			width:100%;
+			margin-bottom:10px;
+		}
+		tr td:nth-child(1)
+		{
+			display:none;
+		}
+		video
+		{
+			width:100%;
+		}
+		body
+		{
+			
+		}
+		form
+		{
+			clear:both;
+		}
+		#miau
+		{
+			width:130px;
+			display:block;
+			float:left;
+			margin-bottom:20px;
+		}
+		textarea
+		{
+			width:100%;
+		}
+		#proyecto
+		{
+			margin:0;
+			width:100%;
+
+		}
+		#divsubmit
+		{
+			float:left;
+			margin-left:0px;
+		}
+		nav[id="Movil"]
+		{
+			display:block;
+		}
+		nav[id="Movil"] select
+		{
+    			margin: 0px;
+    			width: 100%;
+    			font-size: 20px;
+    			padding: 3px;
+		}
+		nav[id="PC"]
+		{
+			display:none;
+		}
+		#musica
+		{
+			position:absolute;
+			top:10px;left:0px;
+		}
+	}
