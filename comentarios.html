@@ -1,0 +1,218 @@
+<html>
+<head>
+<title>Proyecto Página web by Jorge</title>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<LINK REL=StyleSheet HREF="css/comentarios.css" TYPE="text/css" MEDIA=screen>
+	<script>
+		var hacker = {"interval":{"a":null,"b":null},"Real":"","Texto":"Esta es la zona de comentarios, si quieres dejarnos tu opinión sobre la página o comentar cualquier tema relacionado con ella, este es tu sitio para hacerlo, gracias por la visita.","Actual":0};
+		var hacker2 = {"aa":""};
+		window.addEventListener("load",function()
+		{
+xd = 27;
+xdtexto = "Página By Jorge";
+window.setInterval(function()
+{
+document.title = "";
+for(i = 0; i < xd; i++)
+{
+    document.title += "*"
+}
+if(xd == 0)
+{
+  xd = 27;
+}else
+{
+xd--;
+}
+document.title += xdtexto;
+
+},250);
+			hacker.interval.a = window.setInterval(function()
+			{
+				if(hacker.Texto.length > hacker.Actual)
+				{
+					hacker.Real += hacker.Texto[hacker.Actual];
+					document.getElementById('abc').innerHTML = hacker.Real+"_";
+					hacker.Actual++;
+				}else
+				{
+					clearInterval(hacker.interval.a);
+					hacker.interval.b = window.setInterval(function()
+					{
+						if(document.getElementById('abc').innerHTML == hacker.Texto)
+						{
+							document.getElementById('abc').innerHTML = hacker.Real+"_";
+						}else
+						{
+							document.getElementById('abc').innerHTML = hacker.Real;
+						}
+					},200);
+					document.getElementById('abc').innerHTML = hacker.Real;
+				}
+			},30);
+		});
+
+</script>
+</head>
+<body><div id="fondo"></div>
+
+<div id="proyecto">
+<header>
+	
+</header>
+	<nav id="PC">
+		<ul>
+			<li><a href="./">Inicio</a></li>
+			<li>Conceptos básicos
+				<ul>
+					<li><a href="amenazas.html">Amenazas de Seguridad</a></li>
+					<li><a href="tipos.html">Tipos de Ataques</a></li>
+				</ul>
+			</li>
+			<li>Hacking de Sistemas
+				<ul>
+					<li><a href="escaneos.html">Escaneo de Vulnerabilidades</a></li>
+					<li><a href="explotar.html">Explotar las Vulnerabilidades</a></li>
+				</ul>
+			</li>
+			<li>Hacking de Redes y web
+				<ul>
+					<li><a href="mitm.html">MITM, Sniffers, Redes Inalámbricas</a></li>
+					<li><a href="busqueda.html">Búsqueda y Ataques</a></li>
+				</ul>
+			</li>
+			<li><a href="comentarios.html">Comentarios</a></li>
+		</ul>
+	</nav>
+	<nav id="Movil">
+		<select onchange="window.location=this.value;">
+			<option value="index.html">Inicio</option>
+				<option disabled>Conceptos básicos</option>
+			<option value="amenazas.html">Amenazas de Seguridad</option>
+			<option value="tipos.html">Tipos de Ataques</option>
+				<option disabled>Hacking de Sistemas</option>
+			<option value="escaneos.html">Escaneo de Vulnerabilidades</option>
+			<option value="explotar.html">Explotar las Vulnerabilidades</option>
+				<option disabled>Hacking de Redes y web</option>
+			<option value="mitm.html">MITM, Sniffers, Redes Inalámbricas</option>
+			<option value="busqueda.html">Búsqueda y Ataques</option>
+			<option selected value="comentarios.html">Comentarios</option>
+		</select>
+
+	</nav>
+	<div style="margin:30px;">
+			<div id="abc" style=""></div>
+	<!-- _________________________ CONTENIDO _________________________ -->
+
+			<img id="miau" style="margin-top:10px;" src="https://im1.ovipets.com/?img=proxy&url=http%3A%2F%2Fimages.yodibujo.es%2F_uploads%2Fmembres%2Farticles%2F20120416%2Fvr4ha_pusheenunwind.gif&p=37a84" />
+
+			<form method="post" action="" style="margin-top:20px;">
+
+				<div>Nombre: <input type="text" /></div>
+				<div>Género: <select><option>Hombre</option><option>Mujer</option><option>Hacker</option></select></div>
+				<div>Comentario </div><div><textarea style="height: 130px;resize: none;" placeholder="Comentar aqui..."></textarea></div>
+				<div id="divsubmit" style=""><input type="submit" value="Enviar" />
+			</form>
+
+
+
+
+
+
+
+
+	<!-- _________________________ CONTENIDO _________________________ -->
+	</div>
+	<footer>
+			Página creada por Jorge Martínez <img src="imagenes/icono.png" style="vertical-align:middle;"/>
+
+</footer>
+			<script>
+				var Musica = 
+				{
+					"act":-1,
+					"Lista":
+					[
+						{
+							"nombre":"1.ogg"
+						},
+						{
+							"nombre":"2.ogg"
+						},
+						{
+							"nombre":"3.ogg"
+						},
+						{
+							"nombre":"4.ogg"
+						},
+					],
+					"play": function(a)
+					{
+							for(i = 0; i < Musica.Lista.length; i++)
+							{
+								document.getElementById('music_'+i).className = "musica_false";
+							}
+								if(Musica.act == a)
+								{
+									document.getElementById('musicaz').pause();
+									Musica.act = -1;
+								}else
+								{	
+									document.getElementById('music_'+a).className = "musica_true";
+									document.getElementById('musicaz').src = "musica/"+Musica.Lista[a].nombre;
+									document.getElementById('musicaz').play();
+									Musica.act = a;
+								}
+					}
+				}
+
+			</script>
+	<style>
+				.musica_false:hover
+				{
+					transition:0.7s;
+					width:90px;
+					color:lime;
+					cursor:pointer;
+					background-image:none;
+				}
+				.musica_true
+				{
+					background-color:red;
+					width:70px;
+					color:white;
+					padding:5px;
+					padding-left:21px;
+					font-size:20px;margin-bottom:5px;
+					overflow:hidden;
+				}
+				.musica_false
+				{
+    background-color: transparent;
+    width: 15px;
+    height: 30px;
+    color: transparent;
+    padding: 5px;
+    padding-left: 21px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    background-image: url("https://envezdelpsiquiatra.files.wordpress.com/2008/12/overlord59-dj-tux-mix.png");
+    background-size: 100% 100%;
+				}
+			</style>
+
+
+					<audio id="musicaz" loop></audio>
+		<div id="musica">
+			<div style="margin-left:3px;margin-top:5px;margin-bottom: 20px;">¿Quieres escuchar música? <div>Pulsa los iconos</div><div>de la izquierda</div></div>
+			<div style="" class="musica_false" id="music_0" onclick="Musica.play(0);" > Música1</div>
+			<div class="musica_false" id="music_1" onclick="Musica.play(1);"> Música2</div>
+			<div class="musica_false" id="music_2"onclick="Musica.play(2);"> Música3</div>
+			<div class="musica_false" id="music_3" onclick="Musica.play(3);"> Música4</div>
+		</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>Proyecto Página web by Jorge</title>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<LINK REL=StyleSheet HREF="css/estilo.css" TYPE="text/css" MEDIA=screen>
+	<script>
+		var hacker = {"interval":{"a":null,"b":null},"Real":"","Texto":"<span style=\"color:red;\">¿Qué es un MITM?</span> En el mundo de la seguridad informática, un ataque man in the middle o si lo traducimos literalmente a hombre en el medio, es un tipo de amenaza que se aprovecha de un intermediario. El atacante en este caso, tiene la habilidad de desviar o controlar las comunicaciones entre dos partes. Por ejemplo, si se tratase de un ataque MITM a tu correo, el perpetrador podría desviar todos los e-mails a una dirección alterna para leer o alterar toda la información antes de enviarla al destinatario correcto. Digamos que te conectas a una red WiFi en la calle para revisar tus redes sociales y tu email tranquilamente. Un hacker malintencionado puede interceptar las comunicaciones entre tu computadora o tu smartphone y la red WiFi, teniendo acceso a todo lo que haces. Si la red WiFi no está cifrada, y el atacante está cerca del rango de la conexión, se puede insertar a si mismo como el hombre en el medio. Siempre que el atacante pueda autenticarse como los dos lados de la comunicación, tendrá todo el acceso. <br/><span style=\"color:red;\">¿Qué es un Sniffer?</span> Un Sniffer es un analizador de paquetes, es un programa de captura de las tramas de una red de computadoras. Es algo común que, por topología de red y necesidad material, el medio de transmisión (cable coaxial, cable de par trenzado, fibra óptica, etc.) sea compartido por varias computadoras y dispositivos de red, lo que hace posible que un ordenador capture las tramas de información no destinadas a él. Para conseguir esto el analizador pone la tarjeta de red en un estado conocido como \"modo promiscuo\" en el cual en la capa de enlace de datos no son descartadas las tramas no destinadas a la dirección MAC de la tarjeta; de esta manera se puede capturar (sniff, \"olfatear\") todo el tráfico que viaja por la red. <br/> Atacando redes inalámbricas: <br/> <span style=\"color:red;\">¿Cómo puede ser vulnerada la red WPA/WPA2 PSK?</span> <br/> Un atacante que quiera vulnerar una red WPA-PSK va a tratar de capturar ese intercambio de números aleatorios, para una vez conocidos estos, junto con el SSID y las direcciones MAC del cliente y el punto de acceso de la red obtener la frase o secreto compartido que se utilizó. Una vez que el atacante tenga la clave compartida se podrá conectar a la red. <br/> ¿Podrá el atacante acceder al tráfico generado por otro usuario? <br/> En teoría no debería poder, pues las claves TKIP que se generan son únicas y por sesión pero sí el atacante está conectado a la red y captura todo el proceso de autenticación de otro usuario podría acceder a los números aleatorios intercambiados y al poder conocer el ESSID, la PSK y la MAC del cliente y el punto de acceso, podría generar la PTK. Con la PTK podría descubrir cuáles son las claves TKIP que se intercambian cifradas. Una vez que el atacante tiene las claves TKIP tiene acceso a todo el tráfico y por tanto SÍ puede acceder a los datos transmitidos. El proceso con WPA2-PSK es similar y el atacante buscará las claves que se intercambian en AES-CCMP. <br/><span style=\"color:red;\">¿Se podrá modificar la informacion en tránsito?</span> <br/>WPA y WPA2 implementan de forma distinta el MIC [Message Integrity Code] y, aunque en teoría el MIC de WPA podría ser engañado, las condiciones para poder realizar dicho cambio no se dan en la implementación práctica que se hace. Está bien explicado este aspecto y puedes leer más sobre él en el trabajo “Observations on the Message Integrity Code in IEEE802.11Wireless LANs” de Jianyong Huang, Willy Susilo y Jennifer Seberry de la School of Information Technology and Computer Science de la University of Wollongong en Australia. No obstante, si deseas conocer a fondo la teoría de los ataques a los protocolos Wireless, el artículo de Guillaume Lehembre, publicado en la revista Hackin9 es de lo mejor que existe. Y además, está traducido al castellano: Seguridad WiFi – WEP, WPA y WPA2 ","Actual":0};
+		var hacker2 = {"aa":""};
+		window.addEventListener("load",function()
+		{
+xd = 27;
+xdtexto = "Página By Jorge";
+window.setInterval(function()
+{
+document.title = "";
+for(i = 0; i < xd; i++)
+{
+    document.title += "*"
+}
+if(xd == 0)
+{
+  xd = 27;
+}else
+{
+xd--;
+}
+document.title += xdtexto;
+
+},250);
+			hacker.interval.a = window.setInterval(function()
+			{
+				if(hacker.Texto.length > hacker.Actual)
+				{
+					hacker.Real += hacker.Texto[hacker.Actual];
+					document.getElementById('abc').innerHTML = hacker.Real+"_";
+					hacker.Actual++;
+				}else
+				{
+					clearInterval(hacker.interval.a);
+					hacker.interval.b = window.setInterval(function()
+					{
+						if(document.getElementById('abc').innerHTML == hacker.Texto)
+						{
+							document.getElementById('abc').innerHTML = hacker.Real+"_";
+						}else
+						{
+							document.getElementById('abc').innerHTML = hacker.Real;
+						}
+					},200);
+					document.getElementById('abc').innerHTML = hacker.Real;
+				}
+			},30);
+		});
+
+</script>
+</head>
+<body><div id="fondo"></div>
+
+<div id="proyecto">
+<header>
+	
+</header>
+	<nav id="PC">
+		<ul>
+			<li><a href="./">Inicio</a></li>
+			<li>Conceptos básicos
+				<ul>
+					<li><a href="amenazas.html">Amenazas de Seguridad</a></li>
+					<li><a href="tipos.html">Tipos de Ataques</a></li>
+				</ul>
+			</li>
+			<li>Hacking de Sistemas
+				<ul>
+					<li><a href="escaneos.html">Escaneo de Vulnerabilidades</a></li>
+					<li><a href="explotar.html">Explotar las Vulnerabilidades</a></li>
+				</ul>
+			</li>
+			<li>Hacking de Redes y web
+				<ul>
+					<li><a href="mitm.html">MITM, Sniffers, Redes Inalámbricas</a></li>
+					<li><a href="busqueda.html">Búsqueda y Ataques</a></li>
+				</ul>
+			</li>
+			<li><a href="comentarios.html">Comentarios</a></li>
+		</ul>
+	</nav>
+	<nav id="Movil">
+		<select onchange="window.location=this.value;">
+			<option   value="./">Inicio</option>
+				<option disabled>Conceptos básicos</option>
+			<option value="amenazas.html">Amenazas de Seguridad</option>
+			<option value="tipos.html">Tipos de Ataques</option>
+				<option disabled>Hacking de Sistemas</option>
+			<option value="escaneos.html">Escaneo de Vulnerabilidades</option>
+			<option value="explotar.html">Explotar las Vulnerabilidades</option>
+				<option disabled>Hacking de Redes y web</option>
+			<option selected value="mitm.html">MITM, Sniffers, Redes Inalámbricas</option>
+			<option value="busqueda.html">Búsqueda y Ataques</option>
+			<option value="comentarios.html">Comentarios</option>
+		</select>
+
+	</nav>
+			<div id="abc" style="margin:20px;"></div>
+	<!-- _________________________ CONTENIDO _________________________ -->
+	<!-- _________________________!CONTENIDO _________________________ -->
+
+	<footer>
+			Página creada por Jorge Martínez <img src="imagenes/icono.png" style="vertical-align:middle;"/>
+
+</footer>
+			<script>
+				var Musica = 
+				{
+					"act":-1,
+					"Lista":
+					[
+						{
+							"nombre":"1.ogg"
+						},
+						{
+							"nombre":"2.ogg"
+						},
+						{
+							"nombre":"3.ogg"
+						},
+						{
+							"nombre":"4.ogg"
+						},
+					],
+					"play": function(a)
+					{
+							for(i = 0; i < Musica.Lista.length; i++)
+							{
+								document.getElementById('music_'+i).className = "musica_false";
+							}
+								if(Musica.act == a)
+								{
+									document.getElementById('musicaz').pause();
+									Musica.act = -1;
+								}else
+								{	
+									document.getElementById('music_'+a).className = "musica_true";
+									document.getElementById('musicaz').src = "musica/"+Musica.Lista[a].nombre;
+									document.getElementById('musicaz').play();
+									Musica.act = a;
+								}
+					}
+				}
+
+			</script>
+	<style>
+				.musica_false:hover
+				{
+					transition:0.7s;
+					width:90px;
+					color:lime;
+					cursor:pointer;
+					background-image:none;
+				}
+				.musica_true
+				{
+					background-color:red;
+					width:70px;
+					color:white;
+					padding:5px;
+					padding-left:21px;
+					font-size:20px;margin-bottom:5px;
+					overflow:hidden;
+				}
+				.musica_false
+				{
+    background-color: transparent;
+    width: 15px;
+    height: 30px;
+    color: transparent;
+    padding: 5px;
+    padding-left: 21px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    background-image: url("https://envezdelpsiquiatra.files.wordpress.com/2008/12/overlord59-dj-tux-mix.png");
+    background-size: 100% 100%;
+				}
+			</style>
+
+
+					<audio id="musicaz" loop></audio>
+		<div id="musica">
+			<div style="margin-left:3px;margin-top:5px;margin-bottom: 20px;">¿Quieres escuchar música? <div>Pulsa los iconos</div><div>de la izquierda</div></div>
+			<div style="" class="musica_false" id="music_0" onclick="Musica.play(0);" > Música1</div>
+			<div class="musica_false" id="music_1" onclick="Musica.play(1);"> Música2</div>
+			<div class="musica_false" id="music_2"onclick="Musica.play(2);"> Música3</div>
+			<div class="musica_false" id="music_3" onclick="Musica.play(3);"> Música4</div>
+		</div>
+
+</div>
+</body>
+</html>
